@@ -13,6 +13,7 @@ import {
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { BACKEND_URL } from "../util/util.js";
 
 function Bot({ sender, text }) {
   const [messages, setMessages] = useState([])
@@ -34,7 +35,7 @@ function Bot({ sender, text }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/bot/Message",
+        `${BACKEND_URL}/bot/Message`,
         {
           text: question,
         }
