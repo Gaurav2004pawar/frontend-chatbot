@@ -1,1 +1,1 @@
-export const BACKEND_URL="http://localhost:3000"
+export const BACKEND_URL="https://chatbot-backend-2ei7.onrender.com"
