@@ -38,7 +38,9 @@ function Bot({ sender, text }) {
         `${BACKEND_URL}/bot/Message`,
         {
           text: question,
-        }
+        }, {
+    withCredentials: true,
+  }
       );
 
       setMessages((prev) => [
